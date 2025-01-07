@@ -1,8 +1,6 @@
 # 30 Days DevOps Challenge 
 
 
-[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
-
 ### DAILY PROGRESS 
 
 <!-- <details>
@@ -10,7 +8,7 @@
 
 | Day(s) | COMPLETEd | 
 | :---: | :---:|
-|1  |  ✅ [here](./Day01/README.md) |
+|1  |  ✅ [here](./Day01/src/README.md) |
 |2 |  ❌ |
 
 <!-- </details> -->
