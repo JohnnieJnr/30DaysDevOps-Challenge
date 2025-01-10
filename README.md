@@ -6,9 +6,9 @@
 <!-- <details>
   <summary> CLICK TO EXPAND </summary> -->
 
-| Day(s) | COMPLETEd | 
+| Day(s) | COMPLETED |
 | :---: | :---:|
-|1  |  ✅ [here](./Day01/src/README.md) |
-|2 |  ❌ |
+|1 |  [Weather Dashborad](./Day01/src/README.md) ✅ |
+|2 |  [Game Day Notification](./Day02/src/README.md) ✅ |
 
 <!-- </details> -->
