@@ -6,7 +6,7 @@ This project is an alert system that sends instant NBA game day score notificati
 ---
 
 ## **Technical Architecture**
-![nba_architecture](./Day02/src/assets/img/architecture.png)
+![nba_architecture](./src/assets/img/architecture.png)
 
 ## **Features**
 - Fetches live NBA game scores using an external API.
