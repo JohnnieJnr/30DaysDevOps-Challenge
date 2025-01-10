@@ -30,23 +30,23 @@ This project is an alert system that sends instant NBA game day score notificati
 ## **1. Create AWS SNS Topic and Subcription**
 - Navigate to the AWS SNS dashboard in the AWS management Console. On the left navigaation panel, click on <b>'Topics'</b> and click on <b>'Create topic'</b> respectively.  
 
-    ./src/assets/img/topic-creation.png
+    ![topic-creation](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/f090ef5df5e4df48d5ed0a70cca912e934b1845f/Day02/src/assets/img/topic-creation.png)
 
 - Choose standard topic type and give the topice a name(eg. game-day-topic) and click on create.
 
-    ./src/assets/img/topic-creation2.png
+    ![topic-creation2](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/f090ef5df5e4df48d5ed0a70cca912e934b1845f/Day02/src/assets/img/topic-creation2.png)
 
 - After creating the topic, an ARN(Amazon Resource Name) will be assigned to your topic, which you'll need in configuring the Lambda function. After confirming the ARN proceed to create a subcription by clickin on the create subscription button on the right side of the screen.
 
-    ./src/assets/img/topic-arn.png
+    ![topic-arn](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/f090ef5df5e4df48d5ed0a70cca912e934b1845f/Day02/src/assets/img/topic-arn.png)
 
 - Select email from the <b>'Protocol'</b> section, type your email and the <b>'Endpoint'</b> section and click <b>'Create subscription'</b>.
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/subcriptioni-creation.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/subcriptioni-creation.png)
 
 - Confirm your email subcription by clickin the link sent to your email 
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/sub-email-confirm.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/sub-email-confirm.png)
 
 ## **2. Create IAM Role and Policie**
 Next step is to create an AWS Policy and IAM Role for the Lambda function to be able to publish to the SNS topic.
@@ -65,15 +65,15 @@ Next step is to create an AWS Policy and IAM Role for the Lambda function to be 
             ]
         }
     ```
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/policy-creation.png
+    (https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/policy-creation.png)
 
 - After the creation of the IAM Policy, proceed to create and IAM Role for to be used by the Lambda function. Select both the policy creted and <b>AWSLambdaBasicFunctionRole</b>, click next and give the role a name.
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/iam-role-creation.png
+    (https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/iam-role-creation.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/iam-role-creation2.png
+    (https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/iam-role-creation2.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/iam-role-creation3.png
+    (https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/iam-role-creation3.png)
 
 
 ## **3. Create AWS Lambda Fuction**
@@ -82,9 +82,9 @@ AWS Lambda is a serverless compute service that runs your code in response to ev
 - Navigate to the <b>AWS Lambda dashboard</b> and click the <b>“Create function”</b>.
 - Choose the <b>“Author from scratch”</b> option, gve the function a name and select <b>Python</b> as the <b>Runtime</b>. Under the <b>Change default execution role</b>, select <b>Use an existing role</b> and select the role created in the IAM section and click on <b>“Create function”</b>.
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-creation.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-creation.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-creation2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-creation2.png)
 
 - With the Lambda function created, we can add our code to retieve the game-day data from [sportsdata.io](https://sportsdata.io/) and publish it to our SNS topic 
 
@@ -185,19 +185,19 @@ AWS Lambda is a serverless compute service that runs your code in response to ev
 
 - Go to the <b>“Code”</b> tab, paste code, and click on “Deploy” to deploy the code. In the lambda dashboard, go to configuration and <b>Environment variables</b> and add <b>NBA_API_KEY</b> from your [sportsdata.io](https://sportsdata.io/) account and also the <b>SNS_TOPIC_ARN</b>
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-code-deploy.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-code-deploy.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-code-deploy2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-code-deploy2.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-code-deploy3.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-code-deploy3.png)
 
 - With the code deployment complete, we can now test to ensure that everything is working as it should. In the lambda function dasshboardl click on <b>Test</b>. If everything is working , you should recieve an email with all the game detail from [sportsdata.io](https://sportsdata.io/)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-test.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-test.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-test2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-test2.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-test3.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/lambda-test3.png)
 
 
 ## **4. Create EventBridge schedular**
@@ -205,31 +205,31 @@ Amazon EventBridge Scheduler is a serverless scheduler that allows you to create
 
 - Navigate to the EventBridge dashboard and click <b>Create role</b>. At the <b> Define rule detail</b> section, give a name to the rule and select <b>Schedule</d> and click <b>Continue in EventBridge Schedule</b>
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-setup.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-setup.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-setup2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-setup2.png)
 
 - At the <b>Schedule name and description</b> section, give your preferred name to the schedule, select <b>Recurring schedule</b>, <b>Cron-based schedule</b>   
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule2.png)
 
 - At the target section, select AWS Lambda as the target and select the Lambda function create to invoke
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-lambda-invoke.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-lambda-invoke.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-lambda-invoke2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-lambda-invoke2.png)
 
 - With that done, we can proceed to finalise the schedule. Next is to leave the rest with the default values, review and create th schedule.
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup2.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup2.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup3.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup3.png)
 
-    https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup4.png
+    ![](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day02/src/assets/img/EB-schedule-setup4.png)
 
 ## **Lessons**
 - How to design a notification bases system using AWS SNS pub/sub and Lambda.
