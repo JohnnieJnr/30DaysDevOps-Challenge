@@ -10,5 +10,6 @@
 | :---: | :---:|
 |1 |  [Weather Dashborad](./Day01/src/README.md) ✅ |
 |2 |  [Game Day Notification](./Day02/src/README.md) ✅ |
+|3 |  [NBA Data Lake](./Day03/src/README.md) ✅ |
 
 <!-- </details> -->
