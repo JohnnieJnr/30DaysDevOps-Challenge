@@ -48,7 +48,7 @@ nano setup_nba_data_lake.py
 ```
 
 
-2. In another window, go to [GitHub](https://github.com/alahl1/NBADataLake)
+2. In another window, go to [GitHub](https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day03/src/data_lake_setup.py)
 
 -Copy the contents inside the setup_nba_data_lake.py file
 
