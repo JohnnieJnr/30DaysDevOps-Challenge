@@ -119,6 +119,8 @@ Under Add Permission search for AmazonS3FullAccess, MediaConvertFullAccess and A
 
 Under Role Details, enter "HighlightProcessorRole" as the name
 
+![] (https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/main/Day05/assets/img/role_creation.png)
+
 Select Create Role
 
 Find the role in the list and click on it
