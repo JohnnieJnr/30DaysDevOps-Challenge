@@ -146,6 +146,7 @@ Edit the Trust Policy and replace it with this:
   ]
 }
 ```
+![] (https://github.com/JohnnieJnr/30DaysDevOps-Challenge/blob/b7f3879376f2fb017814d4332985f630b4fad84f/Day05/assets/img/role_creation.png)
 
 ## **Step 4: Update .env file**
 1. RapidAPI_KEY: Ensure that you have successfully created the account and select "Subscribe To Test" in the top left of the Sports Highlights API
